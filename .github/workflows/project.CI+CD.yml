@@ -42,3 +42,9 @@ jobs:
       with:
           service-id: ${{ secrets.SERVICE_ID }}
           api-key: ${{ secrets.RENDER_TOKEN }}
+          
+    - name: Install playwright
+      run: npx playwright install
+      
+    - name: Run UI tests
+      run: npm run test:ui
